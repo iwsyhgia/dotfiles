@@ -1,0 +1,38 @@
+[init]
+  templatedir = ~/.git_template
+[push]
+  default = current
+[color]
+  ui = auto
+[alias]
+  aa = add --all
+  ap = add --patch
+  branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+  ci = commit -v
+  co = checkout
+  pf = push --force-with-lease
+  st = status
+  l = log --pretty=colored
+	gsch = !sh -c \"git branch -a | grep -v remotes | grep $1 | xargs git checkout\"
+[pretty]
+  colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
+[core]
+  excludesfile = ~/.gitignore
+	autocrlf = false
+	editor = vim
+	eol = lf
+[merge]
+  ff = only
+[commit]
+  template = ~/.gitmessage
+[fetch]
+  prune = true
+[rebase]
+  autosquash = true
+[include]
+  path = ~/.gitconfig.local
+[user]
+	name = Vladimir Borozna
+	email = v.borozna@sumatosoft.com
+[credential]
+	helper = cache --timeout 72000

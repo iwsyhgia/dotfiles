@@ -1,0 +1,149 @@
+alias sal="source ~/.aliases"
+
+alias l='ls -lAXh --color=auto --group-directories-first'
+alias grep='grep --color=auto'
+alias c="clear"
+
+alias bi='bundle install --gemfile=Gemfile'
+alias bil='bundle install --gemfile=Gemfile.local'
+alias bu='bundle update'
+alias be='bundle exec'
+alias bel='BUNDLE_GEMFILE=Gemfile.local bundle exec'
+alias ber='bundle exec rails'
+alias bers='bundle exec rails server'
+alias berc='bundle exec rails console'
+
+alias zrk='zeus rake'
+alias zrn='zeus runner'
+alias zc='zeus console'
+alias zs='zeus server'
+alias zdb='zeus dbconsole'
+alias zt='zeus test'
+alias zrr="zeus rake routes"
+alias zdbdcm="sudo service postgresql restart && zeus rake db:drop db:create db:migrate"
+alias zdbdcms="sudo service postgresql restart && zeus rake db:drop db:create db:migrate db:seed"
+alias zdbs="zeus rake db:seed"
+alias zdbm="zeus rake db:migrate"
+alias zdbr="zeus rake db:rollback"
+alias zrg="zeus rake routes | grep "
+alias -g rgn="--skip-template-engine --no-helper --no-assets --no-controller-specs --no-view-specs --skip-routes"
+
+alias gs="bundle exec guard -g server"
+alias gl="bundle exec guard -g livereload"
+alias gc="bundle exec guard -g common"
+
+alias es="RAILS_ENV=staging"
+alias eq="RAILS_ENV=qa"
+alias ed="RAILS_ENV=development"
+alias et="RAILS_ENV=test"
+alias ep="RAILS_ENV=production"
+alias rs="rails server"
+alias rss="rails server -e staging"
+alias rss="rails server -e production"
+alias rc="rails console"
+alias rdb="rails dbconsole"
+alias rr="rake routes"
+alias rdbdcm="sudo service postgresql restart && rails db:drop db:create db:migrate"
+alias rdbdcms="sudo service postgresql restart && rails db:drop db:create db:migrate db:seed"
+alias rdbs="rails db:seed"
+alias rdbm="rails db:migrate"
+alias rdbr="rails db:rollback"
+alias rrg="rake routes | grep "
+alias -g rgn="--skip-template-engine --no-helper --no-assets --no-controller-specs --no-view-specs --skip-routes"
+
+alias owd="OVERCOMMIT_DISABLE=1"
+alias gploh='git pull origin $(git rev-parse --abbrev-ref HEAD)'
+alias gpsohf="git push origin HEAD -f"
+alias gplom="git pull origin master"
+alias gpsbm="git push bitbucket master"
+alias g="git"
+alias gs="git status --short"
+alias ga="git add"
+alias gch="git checkout"
+alias gcm="git commit -m"
+alias gb="git branch"
+alias gbm="git branch -m"
+alias gd="git diff --color"
+alias gds="git diff --color --staged"
+alias gdh1="git diff HEAD~1 --color"
+alias gr="git remote"
+alias gcp="git cherry-pick"
+alias gplum="git pull upstream master"
+alias gpsum="git push upstream master"
+alias gpsumf="git push upstream master -f"
+alias gpsud="git push upstream development"
+alias gpsup="git push upstream production"
+alias gpsod="git push origin development"
+alias gpsof="git push origin -f"
+alias gplud="git pull upstream development"
+alias gplup="git pull upstream production"
+alias gcd="git checkout --"
+alias grsh1="git reset HEAD^1"
+alias grs="git reset"
+alias grbm="git rebase master"
+alias gpup="git pull upstream development"
+alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold yellow)<%an>%Creset' --abbrev-commit --"
+alias gbclean="git branch --merged dev | grep -v '^[ *]*dev$' | xargs git branch -d"
+alias gsch="sh -c 'git branch -a | grep -v remotes | grep \$1 | xargs git checkout' -- "
+alias grdev="git rebase develop"
+alias gcane="git commit --no-edit --amend"
+alias gcl="git clone"
+alias gdtl="git diff-tree --no-commit-id --name-only -r HEAD"
+alias gst="git stash"
+alias gstl="git stash list"
+alias gstp="git stash pop"
+
+alias e2slim="erb2slim html2slim.html html2slim.slim"
+alias h2slim="html2slim html2slim.html html2slim.slim"
+
+alias zs='zeus server'
+alias zr='zeus rake'
+alias zc='zeus console'
+alias zt='zeus rspec'
+
+alias tmux='TERM=screen-256color-bce tmux'
+alias t='TERM=screen-256color-bce tmux new-session -A -s dev'
+
+alias td='$EDITOR ~/.todo'
+
+alias tmk="tmux kill-server"
+
+alias issh="sudo pkill ssh;eval `ssh-agent -s`;ssh-add ~/.ssh/keys/iwsyhgia;ssh-add ~/.ssh/keys/vladimir_ikantam"
+
+alias -g bcpqd='BRANCH=$(git rev-parse --abbrev-ref HEAD) cap qa deploy'
+alias cpdep="cap production deploy"
+alias cprc="cap production rails:console"
+
+alias tc="truffle compile"
+alias tm="truffle migrate"
+alias tdev="truffle develop"
+
+alias gphdf="git push heroku development:master -f"
+alias hl="heroku logs"
+alias hlt="heroku logs -t"
+alias hlwb="heroku logs -s app --ps web"
+alias hlwr="heroku logs -s app --ps worker"
+alias hlsh="heroku logs -s app --ps sheduler"
+alias hr="heroku run"
+alias hrrc="heroku run rails console"
+alias hrrdm="heroku run rails db:migrate"
+alias hrrdsr="heroku run rails db:scheme:reset"
+
+alias sv="sudo nvim"
+alias v="nvim"
+alias va="nvim -- ~/.aliases"
+alias vs="nvim -- ~/.vimrc"
+alias vt="nvim -- ~/.tmux.conf"
+
+alias cpk="cat package.json"
+alias ssnr="sudo service nginx restart"
+alias nss="netstat -plunt"
+
+alias sshr="sudo pkill ssh; eval `ssh-agent -s`"
+alias nprs="npm run start"
+alias npsr="npm run start-reg"
+alias npd="npm run debug"
+alias npw="npm run wallet"
+alias npc="npm run cli"
+alias npr="npm run"
+alias npt="npm run test"

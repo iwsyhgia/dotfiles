@@ -1,0 +1,53 @@
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+
+nxmoov.credentials
+Procfile.dev
+start
+priority
+nxmoov.pem
+nxmoov.sql
+upload_db.rb
+zareq.json
+
+delete_records.rb
+dump_db.sh
+production.dump
+production_sync.dump
+restore_db.sh
+synchronize.sh
+script.sh
+config/initializers/my_initialization.rb
+download_log.sh
+
+html2slim.html
+html2slim.slim
+script.rb
+nxmoov_backup
+production.log
+.env
+tags
+
+# Zaire
+# spec
+gems.tags
+Gemfile.local
+Gemfile.local.lock
+.overcommit.yml
+Guardfile
+.pryrc
+.projections.json
+config/initializers/generators.rb
+
+spec/controllers/api/v1/reservations/invoices/discounts_controller_spec.rb
+spec/controllers/api/v1/reservations/invoices/payments_controller_spec.rb
+spec/controllers/api/v1/reservations/invoices/refunds_controller_spec.rb
+
+zeus.json
+custom_plan.rb
+spec/support/factory_bot_reload.rb
+

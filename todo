@@ -1,0 +1,20 @@
+git push origin bugfix/change-test-description bugfix/ZAIR-562-563-name-and-logo-page-issues ZAIR-534-update-payments
+
+
+context 'when add a percent discount' do
+  let(:discount1) { 0.9 }
+
+  it('recalculates amount') do
+    create(:discount, kind: :percent, invoice: invoice, value: (1 - discount1) * 100)
+    expect(invoice.amount).to eq(((- price_total - charges_total) * taxes_multiplier * discount1 + payments_total - refunds_total).round)
+  end
+end
+
+context 'when add an amount discount' do
+  let(:discount1) { 50 }
+
+  it('recalculates amount') do
+    create(:discount, kind: :amount, invoice: invoice, value: discount1)
+    expect(invoice.amount).to eq(((- price_total - charges_total) * taxes_multiplier + discount1 + payments_total - refunds_total).round)
+  end
+end
